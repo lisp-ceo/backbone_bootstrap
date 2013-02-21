@@ -14,8 +14,8 @@
 
 import os,sys, subprocess
 
-global_file_include = ('html','md','js','css','.py')
-global_file_exclude = 'swp'
+global_file_include = ('html','md','js','css','py')
+global_file_exclude = ('swp','swo','.pyc')
 global_tokens = ('TODO:',)
 
 def main():
@@ -36,7 +36,7 @@ def print_todos():
       #print root,'\n', dirs,'\n', file_list
       for file_string in file_list:
         # Don't access uninitialized array elements, only access files you want to see, don't access files you don't and don't read this script 
-        if len(str.lower(file_string.split('.')[1])) >= 1 and str.lower(file_string.split('.')[-1]) in ('html','md','js','css','py') and str.lower(file_string.split('.')[-1]) not in ('swp','swo','.pyc') and file_string != __file__:
+        if len(str.lower(file_string.split('.')[1])) >= 1 and str.lower(file_string.split('.')[-1]) in global_file_include and str.lower(file_string.split('.')[-1]) not in global_file_exclude and file_string != __file__:
           with open(os.path.join(root,file_string),'r') as f:
             for read_line in f.readlines():
               for token in global_tokens:
