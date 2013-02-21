@@ -28,3 +28,4 @@ File system:
    - libs
  - admin - largely docs and todos
  - tests - standard test suite
+ TODO: Test of shit
