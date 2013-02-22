@@ -1,0 +1,20 @@
+{
+    "author": "James Meldrum <jrm.general@gmail.com> (http://jamesmeldrum.github.com/)",
+    "name": "backbone_bootstrap",
+    "description": "A modular backbone environment",
+    "version": "0.0.1",
+    "homepage": "http://jamesmeldrum.github.com/",
+    "repository": {
+      "type": "git",
+      "url": "git@github.com:JamesMeldrum/backbone_bootstrap.git"
+    },
+    "main": "build/server",
+    "engines": {
+      "node": "~0.6.11"
+    },
+    "dependencies": {
+      "express": "~2.5.8"
+    },
+    "devDependencies": {},
+    "optionalDependencies": {}
+}
