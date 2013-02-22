@@ -2,6 +2,7 @@ Monstrous Shoes
 ===============
 
 Deps:
+  * Jekyll - suuuuuuuper lightweight, move to Django eventually
   * Backbone.js
   * Require.js
   Replace with Twitter Bootstrap 2

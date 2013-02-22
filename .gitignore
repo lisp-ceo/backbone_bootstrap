@@ -1,3 +1,4 @@
 *.sw?
 *.txt
 src/*
+_site/*
