@@ -1,13 +1,10 @@
-// Require.js allows us to configure shortcut alias
-// Their usage will become more apparent futher along in the tutorial.
 require.config({
   paths: {
     // Major libraries
     jquery: '../libs/jquery/jquery-min',
-    underscore: '../libs/underscore/underscore-min', // https://github.com/amdjs
+    underscore: '../libs/underscore/underscore-min', 
     lodash: '../libs/lodash/lodash', // alternative to underscore
-    backbone: '../libs/backbone/backbone-min', // https://github.com/amdjs
-    springy: '../libs/springy/springyui.js',
+    backbone: '../libs/backbone/backbone-min',
     // Require.js plugins
     text: '../libs/require/text',
 
@@ -17,8 +14,6 @@ require.config({
   }
 
 });
-
-// Let's kick off the application
 
 require([
   'views/app',

@@ -10,6 +10,7 @@ define([
   var BackbonePage = Backbone.View.extend({
     el: '.page',
     render: function () {
+      console.log("Rendered Defaultpage");
       this.$el.html(backbonePageTemplate);
       
       var sidemenuView = Vm.create(this, 'BackboneSideMenuView', SidemenuView);
