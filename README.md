@@ -1,22 +1,26 @@
 Monstrous Shoes
 ===============
 
-Deps:
+## Usage
+
+: git clone
+: jekyll --server --auto
+: begin development! Make sure you look at the .gitignore and ensure it suits your needs
+
+## Deps:
   * Jekyll - suuuuuuuper lightweight, move to Django eventually
+  * Optional: npm - minification, testing
+## Technologies used:
   * Backbone.js
   * Require.js
-  Replace with Twitter Bootstrap 2
-  { * Twitter bootstrap
-  * Modernizr
-  * 960.css
-  }
+  * Twitter bootstrap
   * Minification
   * long backwards compat
 
 Everything you need to start developing push-based web apps with Jekyll and Backbone.
 Will require some manipulation if being used as part of a bigger framework (but if you're doing that, you're probably doing something wrong.
 
-File system:
+## File system:
 
  - css
    - app - app-specific
@@ -29,3 +33,5 @@ File system:
    - libs
  - admin - largely docs and todos
  - tests - standard test suite
+
+
