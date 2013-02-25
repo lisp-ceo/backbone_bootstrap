@@ -5,11 +5,6 @@
   Main administrative tool for backbone_bootsrap.
   Written in Python over bash to eventually incorporate into Django.
 
-  Not OOP. Don't care. It's a script. There's more to life than making
-  everything a class.
-
-  TODO: Allow multi-line TODOs
-
 """
 
 import os,sys, subprocess
@@ -24,9 +19,6 @@ def main():
     print_instructions()
   else:
     exec_valid_args(valid_args)
-
-#def recurse_dir_for_files(arg,  ):
-#  pass
 
 def print_todos():
   parent_dir = os.path.split(os.path.abspath(__file__))[0]
@@ -43,9 +35,6 @@ def print_todos():
                 if token in read_line:
                   #print file_string, str.lower(file_string.split('.')[-1])
                   print ">>>", read_line.strip()
-
-def print_help():
-  print "Help..."
 
 def validate_arguments(sys_args):
 

@@ -1,7 +1,7 @@
 ({
-    name: '../js/main',
-    baseUrl: '../js',
-    out: 'output/js/main.js',
+    name: 'main',
+    baseUrl: '../js/app',
+    out: 'output/js/app/main.js',
     findNestedDependencies: true,
-    mainConfigFile: '../js/main.js'
+    mainConfigFile: '../js/app/main.js'
 })

@@ -1,3 +1,5 @@
+// Template for default pages
+
 define([
   'jquery',
   'lodash',
@@ -7,9 +9,9 @@ define([
   var DashboardPage = Backbone.View.extend({
     el: '#page',
     render: function () {
-
       $(this.el).html(dashboardPageTemplate);
     }
   });
   return DashboardPage;
 });
+
