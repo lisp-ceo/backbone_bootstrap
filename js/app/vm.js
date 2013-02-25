@@ -27,7 +27,7 @@ define([
       context.children[name] = view;
     }
     Events.trigger('viewCreated');
-    console.log("View created", name);
+    console.log("View created", name,". Context.children", context.children);
     return view;
   };
   

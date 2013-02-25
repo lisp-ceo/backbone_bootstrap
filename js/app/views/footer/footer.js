@@ -8,10 +8,11 @@ define([
   var FooterView = Backbone.View.extend({
     el: '#footer',
     intialize: function () {
-
+      console.log("Init footer");
     },
     render: function () {
       $(this.el).html(footerTemplate);
+      console.log("Render footer");
       this.renderSpringy();
       //Events.on('viewCreated', this.renderSpringy, this);
     },

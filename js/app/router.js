@@ -12,34 +12,38 @@ define([
     //'backbone/:section': 'backbone',
     //'backbone': 'backbone',
     //'manager': 'manager',
-    
-    // Default - catch all
-    '*actions': ['defaultAction','views/backbone/page','DefaultPage']
-  }
+    '*actions': ['defaultAction','views/base/page','DashboardPage']
+  };
+  var old_urls = {
+    '*actions': 'defaultAction'
+  };
   var AppRouter = Backbone.Router.extend({
-    routes: urls
+    routes: old_urls
   });
 
   var generate_routing_table = function(options){
-    var router = new AppRouter(options);
-    for(url in urls){
-      var route_regex = url[0], 
-          view_path = url[1],
-          view_name = url[2];
-      router.on('route:'+route_regex, function (section) {
-        require(view_path, function (BackbonePage) {
+    var generated_router = new AppRouter(options);
+    var appView = options.appView;
+    for(var url in urls){
+      var route_regex = urls[url][0];
+      var view_path = urls[url][1];
+      var view_name = urls[url][2];
+      generated_router.on('route:'+route_regex, function (section) {
+        require([view_path], function (BackbonePage) {
           var backbonePage = Vm.create(appView, view_name, BackbonePage, {section: section});
           backbonePage.render();
         });
       });
     }
+    return generated_router;
   };
 
   var initialize = function(options){
-    var appView = options.appView;
-    generate_routing_table();
+    //var router = new AppRouter(options);
+    //var appView = options.appView;
+    var router = generate_routing_table(options);
     //router.on('route:defaultAction', function (actions) {
-    //  require(['views/dashboard/page'], function (DashboardPage) {
+    //  require(['views/base/page'], function (DashboardPage) {
     //    var dashboardPage = Vm.create(appView, 'DashboardPage', DashboardPage);
     //    dashboardPage.render();
     //  });

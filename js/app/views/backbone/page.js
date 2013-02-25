@@ -8,7 +8,7 @@ define([
   'views/backbone/section'
 ], function($, _, Backbone, Vm, backbonePageTemplate, SidemenuView, SectionView){
   var BackbonePage = Backbone.View.extend({
-    el: '.page',
+    el: '#page',
     render: function () {
       console.log("Rendered Defaultpage");
       this.$el.html(backbonePageTemplate);

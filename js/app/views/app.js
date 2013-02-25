@@ -12,6 +12,7 @@ define([
 
     },
     render: function () {
+      console.log("App.js rendered");
       var that = this;
       $(this.el).html(layoutTemplate);
       require(['views/base/menu'], function (HeaderMenuView) {
