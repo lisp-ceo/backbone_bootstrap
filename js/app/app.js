@@ -10,17 +10,8 @@ define([
     el: '#page',
     initialize: function () {
     
-      //var NestedView2 = Backbone.View.extend({});
-      //var NestedView1 = Backbone.View.extend({
-      //  initialize: function () {
-      //    var nestedView2 = Vm.create(this, 'Nested View 2', NestedView2);
-      //  }
-      //});
-      //var nestedView1 = Vm.create(this, 'Nested View 1', NestedView1);
-
     },
     render: function () {
-      console.log("Render app.js");
       var that = this;
       $(this.el).html(layoutTemplate);
       require(['views/header/menu'], function (HeaderMenuView) {
