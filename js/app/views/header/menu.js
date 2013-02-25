@@ -5,7 +5,7 @@ define([
   'text!templates/base/menu.html'
 ], function($, _, Backbone, headerMenuTemplate){
   var HeaderMenuView = Backbone.View.extend({
-    el: '.main-menu-container',
+    el: '#menu',
     initialize: function () {
     },
     render: function () {
