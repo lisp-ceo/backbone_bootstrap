@@ -5,9 +5,13 @@ define([
   'backbone',
   'events'
 ], function($, _, Backbone, Events){
-  var views = {};
+  var views = {}; // Object containing views
+  var destroy = function (context, name, View, options){
+    console.log("View destroyed: ", name);
+    views[name].undelegateEvents();
+  }
   var create = function (context, name, View, options) {
-    // View clean up isn't actually implemented yet but will simply call .clean, .remove and .unbind
+    // TODO: View clean up isn't actually implemented yet but will simply call .clean, .remove and .unbind
     if(typeof views[name] !== 'undefined') {
       views[name].undelegateEvents();
       if(typeof views[name].clean === 'function') {
@@ -23,6 +27,7 @@ define([
       context.children[name] = view;
     }
     Events.trigger('viewCreated');
+    console.log("View created", name,". Context.children", context.children);
     return view;
   };
   
