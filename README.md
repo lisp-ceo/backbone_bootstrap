@@ -6,10 +6,12 @@ Monstrous Shoes
 : git clone
 : jekyll --server --auto
 : begin development! Make sure you look at the .gitignore and ensure it suits your needs
+: When you're done. Go to the admin folder and run ./build.sh, ensuring you have the relevant node dependencies. Will produce 1-liner for your backone src
 
 ## Deps:
   * Jekyll - suuuuuuuper lightweight, move to Django eventually
   * Optional: npm - minification, testing
+
 ## Technologies used:
   * Backbone.js
   * Require.js
