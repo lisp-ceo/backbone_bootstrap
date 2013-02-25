@@ -11,7 +11,6 @@ define([
     views[name].undelegateEvents();
   }
   var create = function (context, name, View, options) {
-    // TODO: View clean up isn't actually implemented yet but will simply call .clean, .remove and .unbind
     if(typeof views[name] !== 'undefined') {
       views[name].undelegateEvents();
       if(typeof views[name].clean === 'function') {

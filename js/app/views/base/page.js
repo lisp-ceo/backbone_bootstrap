@@ -1,3 +1,5 @@
+// Template for default pages
+
 define([
   'jquery',
   'lodash',

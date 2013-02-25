@@ -1,3 +1,5 @@
+// Template for additional page sections
+
 define([
   'jquery',
   'lodash',

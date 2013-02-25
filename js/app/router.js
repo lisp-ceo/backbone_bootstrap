@@ -9,19 +9,20 @@ define([
     routes: {
       // Pages
       'modules': 'modules',
-      'optimize': 'optimize',
-      'backbone/:section': 'backbone',
-      'backbone': 'backbone',
-      'manager': 'manager',
-      
       // Default - catch all
       '*actions': 'defaultAction'
     }
   });
 
   var initialize = function(options){
+
+    // TODO: Generate route dynamically. Involves deep-dive into Backbone as routes are dynamically updated
+
     var appView = options.appView;
     var router = new AppRouter(options);
+
+    // Add more routes here as needed
+
     router.on('route:defaultAction', function (actions) {
       require(['views/base/page'], function (DashboardPage) {
         var dashboardPage = Vm.create(appView, 'DashboardPage', DashboardPage);
