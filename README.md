@@ -6,7 +6,7 @@ javascript applictions.
 
 ## Features
 
-  * Maintains up-to-date 
+  * Maintains up-to-date dependencies with key technologies
   * Out-of-the-box integration with jekyll (and clones)
 
 ## Usage
@@ -29,7 +29,9 @@ javascript applictions.
   * TODO: When you're done. Go to the admin folder and run ./build.sh, ensuring you have the relevant node dependencies. Will produce 1-liner for your backone src
 
 ## Technologies used:
-  * Backbone.js
-  * Require.js
-  * Twitter bootstrap
+  * Backbone
+  * RequireJS ( + text )
+  * Underscore
+  * jQuery
+  * TODO: Twitter bootstrap
   * TODO: Minification
