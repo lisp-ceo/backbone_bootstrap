@@ -1,7 +1,7 @@
-backbone-bootstrap
+backbone_bootstrap
 ===============
 
-Backbone-bootstrap is an UNauthorized bootstrap for developing client-side
+Backbone_bootstrap is an UNauthorized bootstrap for developing client-side
 javascript applictions.
 
 ## Features
@@ -19,6 +19,14 @@ javascript applictions.
   * TODO: When you're done. Go to the admin folder and run ./build.sh, ensuring you have the relevant node dependencies. Will produce 1-liner for your backone src
 
 ### Via NPM
+
+  * `mkdir myApp && cd myApp`
+  * `npm install backbone_bootstrap`
+  * `cp -R node_modules/backbone_bootstrap/* .`
+  * `npm install`
+  * `jekyll  & || sudo apt-get install jekyll && jekyll &`
+  * Begin development! Make sure you look at the .gitignore and ensure it suits your needs
+  * TODO: When you're done. Go to the admin folder and run ./build.sh, ensuring you have the relevant node dependencies. Will produce 1-liner for your backone src
 
 ## Technologies used:
   * Backbone.js
