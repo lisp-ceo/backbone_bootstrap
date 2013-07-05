@@ -3,6 +3,6 @@ define([
   'underscore',
   'backbone'
 ], function($, _, Backbone){
-  var vent = {};
+  var vent = $.extend({},Backbone.Events);
   return vent;
 });

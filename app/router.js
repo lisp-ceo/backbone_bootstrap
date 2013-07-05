@@ -5,7 +5,7 @@ define([
   'backbone',
   'vm'
 ], function ($, _, Backbone, Vm) {
-  debugger;
+
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Pages
