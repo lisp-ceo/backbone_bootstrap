@@ -10,12 +10,15 @@ javascript applictions.
   * Out-of-the-box integration with jekyll (and clones)
 
 ## Usage
+### Via GitHub
 
   * `git clone git@github.com:JamesMeldrum/backbone_bootstrap.git myApp`
   * `cd myApp && npm install`
-  * `jekyll  &`
+  * `jekyll  & || sudo apt-get install jekyll && jekyll &`
   * Begin development! Make sure you look at the .gitignore and ensure it suits your needs
   * TODO: When you're done. Go to the admin folder and run ./build.sh, ensuring you have the relevant node dependencies. Will produce 1-liner for your backone src
+
+### Via NPM
 
 ## Technologies used:
   * Backbone.js

@@ -2,5 +2,5 @@ TODO
 ====
 
 * Integrate r.js minification
-* Add default ICOs
-* Integrate twitter bootstrap
+* Integrate HTML scaffolding framework (twitter bstrap or similar)
+* Move from jekyll to node-based front-end server
