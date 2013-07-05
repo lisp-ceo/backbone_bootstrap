@@ -2,3 +2,4 @@
 *.txt
 src/*
 _site/*
+node_modules/*
