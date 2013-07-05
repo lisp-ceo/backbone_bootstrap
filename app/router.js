@@ -1,4 +1,13 @@
-// Filename: router.js
+/*
+ *
+ *  Author: James Meldrum
+ *  Date: 7/5/2013
+ *  Desc: Application routing. Add more routes to the `routes` object, listen for
+ *  the polling of routes using the `router` object
+ *        
+ *
+ */
+
 define([
   'jquery',
   'underscore',
@@ -10,7 +19,7 @@ define([
     routes: {
 
       'home': 'home',
-      'yolowaggins' : 'yoloSwaggins',
+      'yoloSwaggins' : 'yoloSwaggins',
 
       // Default - catch all
       '*actions': 'defaultAction'

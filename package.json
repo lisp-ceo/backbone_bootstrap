@@ -1,6 +1,6 @@
 {
-  "name": "backbone_bootstrap",
-  "version": "0.0.0",
+  "name": "backbone-bootstrap",
+  "version": "0.1.1",
   "description": "Bootstrapping development code for Web Development using Backbone.js",
   "main": "index.js",
   "dependencies" : {

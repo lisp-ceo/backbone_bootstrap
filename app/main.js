@@ -46,10 +46,12 @@ require([
   'backbone'
 ], function(AppContainer, Router, Vm, _, Backbone){
 
-  // AppView - this is the default view rendered on all pages. It includes
-  // a header and a footer that do not change.
+  // AppContainer - this is the default view rendered on all pages. It includes
+  // a header and a footer that do not change. Potential for interesting
+  // tracking events to be bound to this
 
   var appContainer = Vm.create({}, 'AppContainer', AppContainer);
+
   appContainer.render();
 
   Router.initialize({appContainer: appContainer});
