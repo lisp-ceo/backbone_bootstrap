@@ -1,3 +1,12 @@
+/*
+ *
+ *  Author: James Meldrum
+ *  Date: 7/5/2013
+ *  Desc: Application entry point. Defines require dependencies and paths.
+ *        Add to your paths spec any external libs you want to use
+ *
+ */
+
 require.config({
   shim : {
   
@@ -15,27 +24,34 @@ require.config({
   },
 
   paths: {
-    //
-    // Major libraries
+
     "jquery": '../node_modules/jquery/tmp/jquery',
     "underscore": '../node_modules/underscore/underscore', 
     "backbone": '../node_modules/backbone/backbone',
     "text": '../node_modules/text/text',
+
     // Just a short cut so we can put our html outside the js dir
     // When you have HTML/CSS designers this aids in keeping them out of the js directory
+
     "templates": '../../templates'
   }
 
 });
 
 require([
-  'views/app',
+  'views/container',
   'router',
   'vm',
   'underscore',
   'backbone'
-], function(AppView, Router, Vm, _, Backbone){
-  var appView = Vm.create({}, 'AppView', AppView);
-  appView.render();
-  Router.initialize({appView: appView});  // The router now has a copy of all main appview
+], function(AppContainer, Router, Vm, _, Backbone){
+
+  // AppView - this is the default view rendered on all pages. It includes
+  // a header and a footer that do not change.
+
+  var appContainer = Vm.create({}, 'AppContainer', AppContainer);
+  appContainer.render();
+
+  Router.initialize({appContainer: appContainer});
+
 });

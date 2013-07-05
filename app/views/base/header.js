@@ -2,7 +2,7 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/base/menu.html'
+  'text!templates/base/header.html'
 ], function($, _, Backbone, headerMenuTemplate){
   var HeaderMenuView = Backbone.View.extend({
     el: '#menu',
@@ -19,7 +19,7 @@ define([
       $('.active').removeClass('active');
       $(ev.currentTarget).addClass('active');
     }
-  })
+  });
 
   return HeaderMenuView;
 });

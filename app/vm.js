@@ -5,11 +5,13 @@ define([
   'backbone',
   'events'
 ], function($, _, Backbone, Events){
+
   var views = {}; // Object containing views
+
   var destroy = function (context, name, View, options){
-    console.log("View destroyed: ", name);
     views[name].undelegateEvents();
-  }
+  };
+
   var create = function (context, name, View, options) {
     if(typeof views[name] !== 'undefined') {
       views[name].undelegateEvents();
@@ -26,12 +28,12 @@ define([
       context.children[name] = view;
     }
     Events.trigger('viewCreated');
-    console.log("View created", name,". Context.children", context.children);
     return view;
   };
   
-  
   return {
-    create: create
+    create  : create,
+    destroy : destroy,
+    views   : views
   };
 });

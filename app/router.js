@@ -8,8 +8,10 @@ define([
 
   var AppRouter = Backbone.Router.extend({
     routes: {
-      // Pages
-      'modules': 'modules',
+
+      'home': 'home',
+      'yolowaggins' : 'yoloSwaggins',
+
       // Default - catch all
       '*actions': 'defaultAction'
     }
@@ -18,25 +20,22 @@ define([
   var initialize = function(options){
 
     // TODO: Generate route dynamically. Involves deep-dive into Backbone as routes are dynamically updated
+    // TODO: options.appContainer is too static. 
 
-    var appView = options.appView;
+    var appContainer = options.appContainer;
     var router = new AppRouter(options);
 
     // Add more routes here as needed
 
     router.on('route:defaultAction', function (actions) {
-      require(['views/base/page'], function (DashboardPage) {
-        var dashboardPage = Vm.create(appView, 'DashboardPage', DashboardPage);
-        dashboardPage.render();
+      require(['views/base/page'], function (DefaultPage) {
+        var defaultPage = Vm.create(appContainer, 'DefaultPage', DefaultPage);
+        defaultPage.render();
       });
     });
-    router.on('route:modules', function () {
-     require(['views/modules/page'], function (ModulePage) {
-        var modulePage = Vm.create(appView, 'ModulesPage', ModulePage);
-        modulePage.render();
-      });
-    });
+
     Backbone.history.start();
+
   };
   return {
     initialize: initialize
